@@ -80,6 +80,8 @@ def readRleString():
 def readRleHexString():
     global currentImage
     rleHexString = input("Enter the hex string holding RLE data: ")
+    print(string_to_data(rleHexString));
+    print(decode_rle(string_to_data(rleHexString)))
     currentImage = decode_rle(string_to_data(rleHexString))
 
 def readDataHexString():
@@ -88,7 +90,7 @@ def readDataHexString():
     currentImage = string_to_data(dataHexString)
 
 def displayRleString():
-    print("RLE representation: " + to_rle_string(currentImage))
+    print("RLE representation: " + to_rle_string(encode_rle(currentImage)))
 
 def displayHexRleData():
     print("RLE hex values: " + to_hex_string(encode_rle(currentImage)))
