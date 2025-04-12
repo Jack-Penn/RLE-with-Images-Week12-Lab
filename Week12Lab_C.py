@@ -64,13 +64,13 @@ def loadFile():
     currentImage = console_gfx.load_file(fileName)
 
 def loadTestImage():
+    print("Test image data loaded.")
     global currentImage
     currentImage = console_gfx.test_image
-    print("Test image data loaded.")
 
 def displayImage():
-    console_gfx.display_image(currentImage)
     print("Displaying image...")
+    console_gfx.display_image(currentImage)
 
 def readRleString():
     global currentImage
