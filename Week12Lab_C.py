@@ -51,8 +51,7 @@ def flatten(data_list):
 
 # Menu
 currentImage = []
-print("RLE Menu")
-print("--------")
+
 
 class MenuOption:
     def __init__(self, name: str, function = lambda : print("Function Not Implemented Yet")):
@@ -110,6 +109,8 @@ while selectedOption != 0:
             MenuOption("Display Hex RLE Data", displayHexRleData),
             MenuOption("Display Hex Flat Data", displayFlatHexData)]
 
+    print("RLE Menu")
+    print("--------")
     for i in range(len(Menu)):
         print(str(i) + ". " + Menu[i].name)
 
