@@ -110,7 +110,7 @@ while selectedOption != 0:
             MenuOption("Display Hex RLE Data", displayHexRleData),
             MenuOption("Display Hex Flat Data", displayFlatHexData)]
 
-    print("RLE Menu")
+    print("\n\nRLE Menu")
     print("--------")
     for i in range(len(Menu)):
         print(str(i) + ". " + Menu[i].name)
