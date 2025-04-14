@@ -97,23 +97,24 @@ def displayFlatHexData():
     print("Flat hex values: " + to_hex_string(currentImage))
 
 
-selectedOption = 1
-while selectedOption != 0:
-    Menu = [MenuOption("Exit", lambda *args : None),
-            MenuOption("Load File", loadFile),
-            MenuOption("Load Test Image", loadTestImage),
-            MenuOption("Read RLE String", readRleString),
-            MenuOption("Read RLE Hex String", readRleHexString),
-            MenuOption("Read Data Hex String", readDataHexString),
-            MenuOption("Display Image", displayImage),
-            MenuOption("Display RLE String", displayRleString),
-            MenuOption("Display Hex RLE Data", displayHexRleData),
-            MenuOption("Display Hex Flat Data", displayFlatHexData)]
+if __name__ == "__main__":
+    selectedOption = 1
+    while selectedOption != 0:
+        Menu = [MenuOption("Exit", lambda *args : None),
+                MenuOption("Load File", loadFile),
+                MenuOption("Load Test Image", loadTestImage),
+                MenuOption("Read RLE String", readRleString),
+                MenuOption("Read RLE Hex String", readRleHexString),
+                MenuOption("Read Data Hex String", readDataHexString),
+                MenuOption("Display Image", displayImage),
+                MenuOption("Display RLE String", displayRleString),
+                MenuOption("Display Hex RLE Data", displayHexRleData),
+                MenuOption("Display Hex Flat Data", displayFlatHexData)]
 
-    print("\n\nRLE Menu")
-    print("--------")
-    for i in range(len(Menu)):
-        print(str(i) + ". " + Menu[i].name)
+        print("\n\nRLE Menu")
+        print("--------")
+        for i in range(len(Menu)):
+            print(str(i) + ". " + Menu[i].name)
 
-    selectedOption = int(input("\nSelect a Menu Option: "))
-    Menu[selectedOption].function()
+        selectedOption = int(input("\nSelect a Menu Option: "))
+        Menu[selectedOption].function()
