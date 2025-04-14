@@ -1,9 +1,5 @@
 import console_gfx
 
-print("Welcome to the RLE image encoder!")
-print("Displaying Spectrum Image:")
-console_gfx.display_image(console_gfx.test_rainbow)
-
 # Required Functions
 def to_hex_string(data): #1
     return ''.join([hex(x)[2:] for x in data])
@@ -98,6 +94,10 @@ def displayFlatHexData():
 
 
 if __name__ == "__main__":
+    print("Welcome to the RLE image encoder!")
+    print("Displaying Spectrum Image:")
+    console_gfx.display_image(console_gfx.test_rainbow)
+
     selectedOption = 1
     while selectedOption != 0:
         Menu = [MenuOption("Exit", lambda *args : None),
